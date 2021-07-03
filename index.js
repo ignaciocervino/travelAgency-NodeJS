@@ -11,6 +11,6 @@ app.get('/', (req,res)=>{//request es lo que yo envio, response es lo que expres
     res.send('Inicio');
 });
 
-app.listen (()=>{
+app.listen (port,()=>{
     console.log(`El Servidor esta funcionando en el puerto ${port}`);
 });
