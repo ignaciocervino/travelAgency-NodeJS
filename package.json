@@ -1,0 +1,21 @@
+{
+  "name": "node-js-travelagency",
+  "version": "1.0.0",
+  "description": "Proyecto con Node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ignaciocervino/travelAgency-NodeJS"
+  },
+  "author": "Ignacio Cerviño",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
