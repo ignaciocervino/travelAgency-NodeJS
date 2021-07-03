@@ -8,13 +8,7 @@ router.get('/', (req,res)=>{//request es lo que yo envio, response es lo que exp
 
 router.get('/nosotros', (req,res)=>{//request es lo que yo envio, response es lo que express me responde
     
-    const viajes = 'Viaje a Alemania';
-    
-    
-    res.render('nosotros' , {
-        //To lo que se le envia a la vista
-        textoViajes : viajes,
-    });//Va escanear el archivo
+    res.render('nosotros');
 });
 
 
