@@ -3,6 +3,7 @@ import { Testimonial } from "../models/Testimoniales.js";
 const paginaInicio = (req,res)=>{//request es lo que yo envio, response es lo que express me responde
     res.render('Inicio',{
         pagina: 'Inicio',
+        clase: 'home'
     });
 }
 
