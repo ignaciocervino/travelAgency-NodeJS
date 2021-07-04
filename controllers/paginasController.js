@@ -1,10 +1,22 @@
 import { Viaje } from "../models/Viajes.js";
 import { Testimonial } from "../models/Testimoniales.js";
-const paginaInicio = (req,res)=>{//request es lo que yo envio, response es lo que express me responde
-    res.render('Inicio',{
-        pagina: 'Inicio',
-        clase: 'home'
-    });
+
+const paginaInicio = async (req,res)=>{//request es lo que yo envio, response es lo que express me responde
+
+    //Consultar 3 viajes del modelo viaje
+    try {
+        const viajes = await Viaje.findAll({limit: 3});
+
+        res.render('Inicio',{
+            pagina: 'Inicio',
+            clase: 'home',
+            viajes
+        });
+    } catch (error) {
+        console.log(error);
+    }
+
+
 }
 
 const paginaNosotros = (req,res)=>{//request es lo que yo envio, response es lo que express me responde
