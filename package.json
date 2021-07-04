@@ -4,7 +4,8 @@
   "description": "Proyecto con Node.js",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node server"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "sequelize": "^6.6.4"
   },
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "nodemon": "^2.0.9"
   }
 }

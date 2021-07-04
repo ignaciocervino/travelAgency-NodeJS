@@ -4,6 +4,8 @@ import router from './routes/index.js'//En la nueva version hay que agregar la e
 import db from './config/db.js';
 const app = express();
 
+import dotenv from 'dotenv';
+dotenv.config({path:"variables.env"});
 
 //Conectar la base de datos
 db.authenticate()
@@ -11,6 +13,8 @@ db.authenticate()
     .catch(error=>console.log(error));
 
 //Definir puerto
+/** Puerto y host para la app */
+const host  = process.env.HOST || '0.0.0.0';
 const port  = process.env.PORT || 4000;
 
 //Habilitar PUG
@@ -34,6 +38,6 @@ app.use(express.static('public'));
 app.use('/',router);//Sporta get,post,put,patch y delete
 
 
-app.listen (port,()=>{
+app.listen (port,host,()=>{
     console.log(`El Servidor esta funcionando en el puerto ${port}`);
 });
